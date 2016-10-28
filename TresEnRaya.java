@@ -139,7 +139,7 @@ public class TresEnRaya {
     public  boolean comprobarPosn(int spot)
     {
         
-        if (posn[spot] == 'X' && posn[spot] == 'O')
+        if (posn[spot] == 'X' || posn[spot] == 'O')
         {
             System.out.println("Esa posicion ya se ha elegido, por favor elija otra");
             return true;
