@@ -40,14 +40,14 @@ public class TresEnRaya {
         System.out.println( "\n\n" );
         //System.out.println(  "\n\n" );
         System.out.println(  " \t\t ___ ____ ___ " );
-        System.out.println(  "\t\t" + posn [2] + "   | " +posn [3]+ "  | " +posn [3]);
         System.out.println(  " \t\t    |    |   " );
+        System.out.println(  "\t\t " + posn [0] + "  | " +posn [1]+ "  | " +posn [2]);
         System.out.println(  " \t\t ___|____|___ " );
-        System.out.println(  "\t\t" +posn [4]+ "   | " +posn [5]+ "  | " +posn [7]);
         System.out.println(  " \t\t    |    |   " );
+        System.out.println(  "\t\t " +posn [3]+ "  | " +posn [4]+ "  | " +posn [5]);
         System.out.println(  " \t\t ___|____|___ " );
-        System.out.println(  "\t\t" +posn [1]+ "   | " +posn [8]+ "  | " +posn [9]);
         System.out.println(  " \t\t    |    |   " );
+        System.out.println(  "\t\t " +posn [6]+ "  | " +posn [7]+ "  | " +posn [8]);
         System.out.println(  " \t\t ___|____|___ " );
         System.out.println(  "\n\n" );
         return "tablero";
