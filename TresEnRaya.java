@@ -8,6 +8,7 @@ public class TresEnRaya {
     
     public static void main(String args[])
     {
+    	
         String ch;
         TresEnRaya Toe=new TresEnRaya();
         do{
@@ -16,15 +17,16 @@ public class TresEnRaya {
             System.out.println ("Volver a jugar ('si'/'no')? ");
             Scanner in =new Scanner(System.in);
             ch=in.nextLine();
-            System.out.println("ch valor es  "+ch);
-        }while (ch.equals("no"));
+            //System.out.println("ch valor es  "+ch);
+         
+        }while (ch.equals("si"));
         
         
     }
     public  void newBoard()
     {
         
-        char posndef[] = {'0','1', '3', '2', '4', '5', '7', '6','8', '9'};
+        char posndef[] = {' ',' ', ' ', ' ', ' ', ' ', ' ', ' ',' ', ' '};
         contador = 0;
         player = 'X';
         for (int i=1; i<10; i++){
@@ -36,16 +38,17 @@ public class TresEnRaya {
     public  String tablero()
     {
         System.out.println( "\n\n" );
-        System.out.println(  "\n\n" );
-        System.out.println(  "\n\n\t\t" + posn [2] + "   | " +posn [3]+ "  | " +posn [3]);
+        //System.out.println(  "\n\n" );
+        System.out.println(  " \t\t ___ ____ ___ " );
+        System.out.println(  "\t\t" + posn [2] + "   | " +posn [3]+ "  | " +posn [3]);
         System.out.println(  " \t\t    |    |   " );
         System.out.println(  " \t\t ___|____|___ " );
-        System.out.println(  "\n\n\t\t" +posn [4]+ "   | " +posn [5]+ "  | " +posn [7]);
+        System.out.println(  "\t\t" +posn [4]+ "   | " +posn [5]+ "  | " +posn [7]);
         System.out.println(  " \t\t    |    |   " );
         System.out.println(  " \t\t ___|____|___ " );
-        System.out.println(  "\n\n\t\t" +posn [1]+ "   | " +posn [8]+ "  | " +posn [9]);
+        System.out.println(  "\t\t" +posn [1]+ "   | " +posn [8]+ "  | " +posn [9]);
         System.out.println(  " \t\t    |    |   " );
-        System.out.println(  " \t\t    |    |   " );
+        System.out.println(  " \t\t ___|____|___ " );
         System.out.println(  "\n\n" );
         return "tablero";
     }
@@ -62,7 +65,7 @@ public class TresEnRaya {
             
             System.out.println(  "\n\n Jugador " + getPlayer() +" elije la posicion." );
             
-            boolean posTaken = false;
+            boolean posTaken = true;
             while (posTaken) {
                 Scanner in =new Scanner (System.in);
                 spot=in.nextInt();
@@ -136,7 +139,6 @@ public class TresEnRaya {
     public  boolean comprobarPosn(int spot)
     {
         
-        
         if (posn[spot] == 'X' && posn[spot] == 'O')
         {
             System.out.println("Esa posicion ya se ha elegido, por favor elija otra");
@@ -158,7 +160,7 @@ public class TresEnRaya {
         
     }
     
-    public String getTitle()
+    public static String getTitle()
     {
         return "Tic Tac Toe" ;
     }
