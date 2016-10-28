@@ -29,7 +29,7 @@ public class TresEnRaya {
         char posndef[] = {'0','1', '2', '3', '4', '5', '6', '7','8', '9'};
         contador = 0;
         player = 'X';
-        for (int i=0; i<10; i++){
+        for (int i=1; i<10; i++){
         	posn[i]=posndef[i];
         }
         tablero();
@@ -41,13 +41,13 @@ public class TresEnRaya {
         //System.out.println(  "\n\n" );
         System.out.println(  " \t\t ___ ____ ___ " );
         System.out.println(  " \t\t    |    |   " );
-        System.out.println(  "\t\t " + posn [0] + "  | " +posn [1]+ "  | " +posn [2]);
+        System.out.println(  "\t\t " + posn [1] + "  | " +posn [2]+ "  | " +posn [3]);
         System.out.println(  " \t\t ___|____|___ " );
         System.out.println(  " \t\t    |    |   " );
-        System.out.println(  "\t\t " +posn [3]+ "  | " +posn [4]+ "  | " +posn [5]);
+        System.out.println(  "\t\t " +posn [4]+ "  | " +posn [5]+ "  | " +posn [6]);
         System.out.println(  " \t\t ___|____|___ " );
         System.out.println(  " \t\t    |    |   " );
-        System.out.println(  "\t\t " +posn [6]+ "  | " +posn [7]+ "  | " +posn [8]);
+        System.out.println(  "\t\t " +posn [7]+ "  | " +posn [8]+ "  | " +posn [9]);
         System.out.println(  " \t\t ___|____|___ " );
         System.out.println(  "\n\n" );
         return "tablero";
@@ -88,14 +88,14 @@ public class TresEnRaya {
         char Winner = ' ';
         
         // Comprobacion sobre X
-        if (posn[1] == 'X' && posn[4] == 'X' && posn[3] == 'X') Winner = 'X';
-        if (posn[4] == 'X' && posn[1] == 'X' && posn[6] == 'X') Winner = 'X';
-        if (posn[7] == 'X' && posn[5] == 'X' && posn[9] == 'X') Winner = 'X';
-        if (posn[1] == 'X' && posn[3] == 'X' && posn[7] == 'X') Winner = 'X';
-        if (posn[2] == 'X' && posn[6] == 'X' && posn[8] == 'X') Winner = 'X';
-        if (posn[3] == 'X' && posn[5] == 'X' && posn[9] == 'X') Winner = 'X';
-        if (posn[1] == 'X' && posn[3] == 'X' && posn[9] == 'X') Winner = 'X';
-        if (posn[3] == 'X' && posn[2] == 'X' && posn[7] == 'X') Winner = 'X';
+        if (posn[1] == 'X' && posn[2] == 'X' && posn[3] == 'X') Winner = 'X';
+        if (posn[4] == 'X' && posn[5] == 'X' && posn[6] == 'X') Winner = 'X';
+        if (posn[7] == 'X' && posn[8] == 'X' && posn[9] == 'X') Winner = 'X';
+        if (posn[1] == 'X' && posn[4] == 'X' && posn[7] == 'X') Winner = 'X';
+        if (posn[2] == 'X' && posn[5] == 'X' && posn[8] == 'X') Winner = 'X';
+        if (posn[3] == 'X' && posn[6] == 'X' && posn[9] == 'X') Winner = 'X';
+        if (posn[1] == 'X' && posn[5] == 'X' && posn[9] == 'X') Winner = 'X';
+        if (posn[3] == 'X' && posn[5] == 'X' && posn[7] == 'X') Winner = 'X';
         if (Winner == 'X' )
         {System.out.println("Jugador 1 ha ganado" );
             return Winner;
@@ -116,7 +116,7 @@ public class TresEnRaya {
         return Winner; }
         
         // comprobar empate
-        for(int i=1;i<11;i++)
+        for(int i=1;i<10;i++)    	//cambio a 10
         {
             if(posn[i]=='X' || posn[i]=='O')
             {
@@ -154,9 +154,8 @@ public class TresEnRaya {
     
     public  void nextPlayer()
     {
-        if (player == 'X')
-        player = 'X';
-        else player = 'O';
+        if (player == 'X')player = 'O';
+        else player = 'X';
         
     }
     
